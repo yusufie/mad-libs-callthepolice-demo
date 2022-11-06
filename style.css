@@ -1,0 +1,399 @@
+body {
+  background-color: rgb(100, 150, 250);
+  overflow: scroll;
+  animation: changeBg 3s linear infinite;
+}
+
+@keyframes changeBg {
+  0% {
+    background-color: rgb(40, 40, 60);
+  }
+
+  50% {
+    background-color: rgb(70, 50, 50);
+  }
+
+  100% {
+    background-color: rgb(40, 40, 60);
+  }
+}
+
+.lights-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+  animation: rotate 1s infinite;
+}
+
+@keyframes redlight {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bluelight {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.redlight,
+.bluelight {
+  width: 100%;
+  height: 150%;
+  border-radius: 50%;
+  display: table-cell;
+  vertical-align: middle;
+  position: absolute;
+  /* top: -25% !important; */
+}
+
+.redlight {
+  background-color: red;
+  background: radial-gradient(
+    rgba(255, 0, 0, 0.5) 0%,
+    transparent 67%,
+    transparent 100%
+  );
+  animation: redlight 1s infinite;
+  right: 40%;
+  bottom: -50%;
+  z-index: -1;
+}
+
+.bluelight {
+  background-color: blue;
+  background: radial-gradient(
+    rgba(0, 0, 255, 0.5) 0%,
+    transparent 67%,
+    transparent 100%
+  );
+  animation: bluelight 1s infinite;
+  left: 40%;
+  top: -50%;
+  z-index: -1;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#mad-libs {
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+  font-size: 120px;
+  color: bisque;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#first-heading {
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+  font-size: 70px;
+  color: beige;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border: solid rgb(201, 124, 124);
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px white, 0 0 25px rgb(197, 192, 255),
+    0 0 25px rgba(32, 28, 153, 0.911);
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 80px;
+}
+
+#edit {
+  font-size: 60px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+  color: cornsilk;
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.madLibsEdit {
+  background-color: rgb(120, 0, 0);
+  border: solid pink;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px white, 0 0 25px pink, 0 0 25px red;
+  width: 40%;
+  padding: 50px;
+}
+
+#preview {
+  font-size: 60px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.madLibsPreview {
+  background-color: rgb(0, 0, 200);
+  border: solid pink;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px white, 0 0 25px pink, 0 0 25px red;
+  width: 40%;
+  padding: 50px;
+  line-height: 80px;
+}
+
+.blank {
+  width: 100px;
+  background-color: rgb(120, 0, 0);
+  border-radius: 8px;
+  border-color: white;
+  border: solid pink;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+  font-size: 60px;
+  color: azure;
+}
+
+input {
+  width: 100px;
+  background-color: rgb(120, 0, 0);
+  border-radius: 8px;
+  border-color: white;
+  border: solid pink;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+  font-size: 60px;
+  color: azure;
+}
+
+input::placeholder {
+  text-align: center;
+  color: var(--azura);
+  font-size: 60px;
+}
+
+input:focus {
+  background-color: rgb(20, 40, 250);
+  color: rgb(255, 255, 255);
+}
+
+.output {
+  background-color: rgb(152, 168, 229);
+  color: white;
+  border-radius: 8px;
+  border-color: white;
+  border: solid pink;
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+}
+
+span {
+  color: rgb(255, 255, 255);
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+  font-size: larger;
+  font-size: 60px;
+  margin: 8px;
+}
+
+.Buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.reset {
+  background-color: rgb(0, 170, 200);
+  border: solid pink;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px white, 0 0 25px pink, 0 0 25px red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 35px;
+}
+
+.reset:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.play {
+  background-color: rgb(0, 200, 0);
+  border: solid pink;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px white, 0 0 25px pink, 0 0 25px red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 35px;
+}
+
+.play:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.stop {
+  background-color: rgb(200, 0, 0);
+  border: solid pink;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px white, 0 0 25px pink, 0 0 25px red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 35px;
+}
+
+.stop:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#policeman {
+  position: flex;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 50px;
+  font-weight: bold;
+  color: bisque;
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+}
+
+.link {
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(100, 150, 250);
+  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Shalimar", cursive;
+}
+
+#google_translate_element {
+  border: solid pink;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px white, 0 0 25px pink, 0 0 25px red;
+}
+
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+div#google_translate_element div.goog-te-gadget-simple {
+  background-color: rgb(109, 73, 255);
+}
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span {
+  color: pink;
+}
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span:hover {
+  color: #fff;
+}
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span:nth-of-type(3) {
+  display: none;
+}
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span:nth-of-type(2) {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}

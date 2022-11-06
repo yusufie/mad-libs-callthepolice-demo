@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>callThePolice</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,700&family=Shalimar&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="lights-container">
+
+    <div class="heading">
+      <h1 id="mad-libs">Mad Libs</h1>
+      <h2 id="first-heading">Help me turn this Policeman into a hero</h2>
+    </div>
+
+    <div class="flex-container">
+      <div class="redlight"></div>
+      <div class="bluelight"></div>
+
+      <div class="madLibsEdit ">
+        <h3 id="edit">Kindly fill in the blanks :)</h3>
+      </div>
+
+      <div class="madLibsPreview ">
+        <h3 id="preview">There you go!</h3>
+      </div>
+
+    </div>
+
+    <div class="Buttons">
+      <button class="reset"> Reset </button>
+      <button class="play"> Play </button>
+      <button class="stop"> Stop </button>
+      <div id="google_translate_element"></div>
+    </div>
+
+    <div id="policeman">If you wish to see this hero please <a class="link" href="./sources/policemen-beep.gif">CLICK HERE!</a>
+    </div>
+
+  </div>
+
+  <audio id="sound" src="./sources/Police_Siren_02.mp3" loop="loop"></audio>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+  <script src="do-not-touch.js"></script>
+  <script src="madlibs.js"></script>
+</body>
+
+</html>
